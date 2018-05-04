@@ -43,4 +43,4 @@ Pubsub.prototype.emit = function(channel, ...data){
 
 Pubsub.prototype.publish = function(options, cb=console.log){
 	this.pubnub.publish(options, cb);
-}
+};
