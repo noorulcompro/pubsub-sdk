@@ -40,3 +40,7 @@ Pubsub.prototype.on = function(channel, handler){
 Pubsub.prototype.emit = function(channel, ...data){
 	this._handlers[channel] && this._handlers[channel].apply(null, data);
 };
+
+Pubsub.prototype.publish = function(options, cb=console.log){
+	this.pubnub.publish(options, cb);
+}
